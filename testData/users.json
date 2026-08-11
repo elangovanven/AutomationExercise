@@ -1,0 +1,14 @@
+{
+   "positiveData" : {
+    "username": "elanelan@yopmail.com",
+    "password" : "Elangovan@123"
+},
+"negativeData" : {
+     "username": "elanelan@yopmail.com",
+    "password" : "Elangovan@124"
+},
+"alwaysWork" : {
+    "username" : "elanalways@yopmail.com",
+    "password" : "Elangovan@123"
+}
+}
