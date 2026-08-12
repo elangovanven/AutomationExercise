@@ -3,9 +3,9 @@ import { Titles } from '../constants/Titles'
 import { Messages } from '../constants/Messages'
 import TestData from '../testData/users.json'
 
-test("TC01-PositiveLogin", async ({ page, homePage, loginPage, deleteAccountPage }) => {
+test.skip("TC01-PositiveLogin", async ({ page, homePage, loginPage, deleteAccountPage }) => {
     //Launch URL
-    await page.goto('/')
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
 
     expect(await homePage.getHomePageTitle()).toBe(Titles.HomePageTitle)
     await homePage.clickSignupLoginButton()

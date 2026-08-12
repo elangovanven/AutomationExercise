@@ -6,7 +6,7 @@ import TestData from '../testData/users.json'
 
 test("TC02-NegativeLogin", async({page, homePage, loginPage})=>
 {
-    await page.goto('/')
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
     expect(await homePage.getHomePageTitle()).toBe(Titles.HomePageTitle)
     await homePage.clickSignupLoginButton()
     await loginPage.verifyLoginSection(Messages.loginSectionHeading)
