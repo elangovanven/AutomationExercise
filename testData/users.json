@@ -10,5 +10,11 @@
 "alwaysWork" : {
     "username" : "elanalways@yopmail.com",
     "password" : "Elangovan@123"
+},
+"contactUsForm" : {
+    "name" : "Elangovan",
+    "email" : "elangovanven@yopmail.com",
+    "subject" : "Submitting Test Form",
+    "message" : "this is my first message for submitting this form"
 }
 }

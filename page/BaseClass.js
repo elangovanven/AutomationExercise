@@ -94,4 +94,27 @@ export default class BasePage {
         await this.page.waitForLoadState('networkidle')
 
     }
+
+    async uploadFile(locator, filePath) {
+        await this.page.locator(locator).setInputFiles(filePath);
+    }
+
+    async handleDialog(action = 'accept', promptText = '') {
+
+        this.page.once('dialog', async dialog => {
+
+            console.log('Dialog type:', dialog.type());
+            console.log('Dialog message:', dialog.message());
+
+            if (action === 'accept') {
+                await dialog.accept();
+            }
+            else if (action === 'dismiss') {
+                await dialog.dismiss();
+            }
+            else if (action === 'prompt') {
+                await dialog.accept(promptText);
+            }
+        });
+    }
 }

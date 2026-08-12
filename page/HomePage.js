@@ -16,6 +16,7 @@ export default class HomePage extends BaseClass {
         this.loggedInAs = "a .fa-user"
         this.deleteAccountButton = "a[href*='delete_account']"
         this.logout = "[href*='logout']"
+        this.contactUsButton = "[href*='contact_us']"
 
     }
 
@@ -46,6 +47,11 @@ export default class HomePage extends BaseClass {
     async logoutApplication() {
         logger.info("Logging out from the application")
         await this.click(this.logout)
+    }
+
+    async clickContactUsButton() {
+        await this.click(this.contactUsButton)
+
     }
 
 
